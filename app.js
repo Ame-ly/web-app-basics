@@ -1,6 +1,8 @@
 const express = require('express');
 const exhbs = require('express-handlebars');
 const products = require('./products.json');
+
+const PORT = process.env.PORT || 5555
 const app = express();
 
 app.use(express.static('public'));
@@ -45,6 +47,6 @@ app.get('/product/:productId', (req, res) => {
 });
 
 
-app.listen(5555, () => {
+app.listen(PORT, () => {
   console.log(`Hello ${5555}`);
 });
